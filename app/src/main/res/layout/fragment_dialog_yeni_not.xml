@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/btn_dialog_kapat"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/btn_text_size"
+        android:layout_marginStart="@dimen/btn_text_size"
+        android:text="Not Ekle"
+        android:background="@android:color/transparent"
+        />
+    <android.support.v7.widget.AppCompatImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/btn_text_size"
+        android:layout_marginTop="@dimen/layout_bosluk"
+        android:layout_marginBottom="@dimen/layout_bosluk"
+        android:id="@+id/btn_dialog_kapat"
+        android:src="@drawable/ic_close"
+        android:background="@android:color/transparent"
+        />
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/et_not"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Notunuzu Yazın"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="@dimen/btn_text_size"
+        android:layout_marginRight="@dimen/btn_text_size"
+        android:layout_marginTop="@dimen/layout_bosluk"
+        android:layout_marginBottom="@dimen/layout_bosluk"
+        />
+    <Button
+        android:id="@+id/btn_not_ekle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_not"
+        android:layout_marginLeft="@dimen/btn_text_size"
+        android:layout_marginRight="@dimen/btn_text_size"
+        android:layout_marginBottom="@dimen/layout_bosluk"
+        android:text="Not Ekle"
+        android:textAllCaps="false"
+        />
+
+    <DatePicker
+        android:id="@+id/dp_tarih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_not_ekle"
+        android:layout_marginLeft="@dimen/btn_text_size"
+        android:layout_marginRight="@dimen/btn_text_size"
+        >
+
+    </DatePicker>
+</RelativeLayout>

@@ -43,15 +43,7 @@ public class ActivityMain extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         backgroundres();
 
-
-        notesList = getNotesList();
-
-        recyclerView = findViewById(R.id.rv_not_listesi);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        adapterNotlarListesi = new AdapterNotlarListesi(this,notesList);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapterNotlarListesi);
-
+        refreshRecyclerView();
 
         button=findViewById(R.id.btn_sepete_not_ekle);
         button.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +93,17 @@ public class ActivityMain extends AppCompatActivity {
         Glide.with(this)
                 .load(R.drawable.main_background)
                 .into(imageView);
+
+    }
+    public void refreshRecyclerView(){
+        notesList.clear();
+        notesList = getNotesList();
+        recyclerView = findViewById(R.id.rv_not_listesi);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        adapterNotlarListesi = new AdapterNotlarListesi(this,notesList);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapterNotlarListesi);
+
 
     }
 

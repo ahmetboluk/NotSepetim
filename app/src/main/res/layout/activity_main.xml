@@ -13,9 +13,11 @@
         android:id="@+id/iv_background"
         android:scaleType="centerCrop"
         />
+    <include layout="@layout/toolbar" android:id="@+id/toolbar"></include>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_not_listesi"
-        android:layout_marginTop="56dp"
+        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >

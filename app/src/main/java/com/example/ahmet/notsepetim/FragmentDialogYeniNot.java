@@ -53,7 +53,7 @@ public class FragmentDialogYeniNot extends android.support.v4.app.DialogFragment
                 values.put("notTarih",mNotIcerik.getText().toString());
                 Uri uri =getActivity().getContentResolver().insert(CONTENT_URI,values);
                 Toast.makeText(getContext(), ""+uri, Toast.LENGTH_SHORT).show();
-
+                ((ActivityMain)getActivity()).refreshRecyclerView();
                 dismiss();
             }
         });

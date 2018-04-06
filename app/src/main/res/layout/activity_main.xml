@@ -15,14 +15,14 @@
         />
     <include layout="@layout/toolbar" android:id="@+id/toolbar"></include>
 
-    <android.support.v7.widget.RecyclerView
+    <com.example.ahmet.notsepetim.data.NotesRecyclerView
         android:id="@+id/rv_not_listesi"
         android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-    </android.support.v7.widget.RecyclerView>
+    </com.example.ahmet.notsepetim.data.NotesRecyclerView>
 
-    <include layout="@layout/bos_liste"></include>
+    <include android:id="@+id/bos_liste" layout="@layout/bos_liste"></include>
 
 </RelativeLayout>

@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="wrap_content">
 
-
-    <ImageView
-        android:id="@+id/iv_logo"
-        android:layout_width="@dimen/logo_genislik"
-        android:layout_height="@dimen/logo_yuksekilk"
-        android:src="@drawable/icon8_note"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="@dimen/logo_margin"
-        android:padding="@dimen/btn_text_size"
-        />
     <Button
-        android:id="@+id/btn_sepete_not_ekle"
+        android:id="@+id/btn_footer"
         android:background="@drawable/btn_not_ekle_arkaplan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,6 +18,6 @@
         android:paddingTop="@dimen/btn_text_padding_yukari_asagi"
         android:paddingBottom="@dimen/btn_text_padding_yukari_asagi"
         android:textColor="@color/btn_text_renk_degistir"
-
-        />
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/btn_text_size"/>
 </RelativeLayout>

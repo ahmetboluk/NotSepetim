@@ -84,7 +84,13 @@ public class NotlarProvider extends ContentProvider {
 
     @Override
     public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
-        return 0;
+        int changeNoteSize = 0;
+            switch (matcher.match(uri)){
+                case 1:
+                    changeNoteSize = db.delete(NOTLAR_TABLE_NAME,selection,selectionArgs);
+                    break;
+            }
+        return changeNoteSize;
     }
 
     @Override

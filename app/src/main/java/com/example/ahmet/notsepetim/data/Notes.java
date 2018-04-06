@@ -7,8 +7,11 @@ package com.example.ahmet.notsepetim.data;
 public class Notes {
 
     private int id;
+
     private String notedescription;
+
     private String noteDate;
+
     private int noteCompleted;
 
     public int getId() {
@@ -23,9 +26,7 @@ public class Notes {
         return notedescription;
     }
 
-    public void setNotedescription(String notedescription) {
-        this.notedescription = notedescription;
-    }
+    public void setNotedescription(String notedescription) { this.notedescription = notedescription; }
 
     public String getNoteDate() {
         return noteDate;

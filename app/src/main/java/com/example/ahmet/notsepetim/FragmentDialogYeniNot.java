@@ -2,6 +2,7 @@ package com.example.ahmet.notsepetim;
 
 import android.app.DialogFragment;
 import android.content.ContentValues;
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,7 +16,10 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.ahmet.notsepetim.data.DataEvent;
 import com.example.ahmet.notsepetim.data.NotlarProvider;
+
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * Created by ahmet on 26.03.2018.
@@ -52,8 +56,7 @@ public class FragmentDialogYeniNot extends android.support.v4.app.DialogFragment
                 values.put("notIcerik",mNotIcerik.getText().toString());
                 values.put("notTarih",mNotIcerik.getText().toString());
                 Uri uri =getActivity().getContentResolver().insert(CONTENT_URI,values);
-                Toast.makeText(getContext(), ""+uri, Toast.LENGTH_SHORT).show();
-                ((ActivityMain)getActivity()).refreshRecyclerView();
+                EventBus.getDefault().post(new DataEvent.DataRefreshFire(1));
                 dismiss();
             }
         });
@@ -66,4 +69,5 @@ public class FragmentDialogYeniNot extends android.support.v4.app.DialogFragment
         });
 
     }
+
 }
